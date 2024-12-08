@@ -25,6 +25,7 @@ values
 ,('透明人', 'opacity0@hexschooltest.io', 'USER')
 ;
 
+
 -- 1-2 修改：用 Email 找到 李燕容、肌肉棒子、Q太郎，如果他的 Role 為 USER 將他的 Role 改為 COACH
 
 update "USER" 
@@ -54,7 +55,7 @@ from "USER" u
 -- 1-5 查詢：取得 USER 資料表所有用戶資料，並列出前 3 筆（提示：使用limit語法）
 
 select *
-from "USER"
+from "USER" u 
 limit 3
 ;
 
@@ -72,9 +73,9 @@ limit 3
 
 insert into "CREDIT_PACKAGE" (name, price , credit_amount)
 values 
-('7 堂組合包方案', 1400, 7)
-,('14 堂組合包方案', 2520, 14)
-,('21 堂組合包方案', 4800, 21)
+('7 堂組合方案包', 1400, 7)
+,('14 堂組合方案包', 2520, 14)
+,('21 堂組合方案包', 4800, 21)
 ;
 
 
@@ -104,7 +105,6 @@ values
 , (select price from "CREDIT_PACKAGE" where name = '14 堂組合方案包')
 )
 ;
-
 
 
 -- ████████  █████   █    ████   
